@@ -57,7 +57,6 @@ $(function () {
  
   $("#btnGetFacts").click(function () {
     $("#coolNameFactsOutput").html();
-    // handle it if input is blank
 
     let userName = $("#userName").val();
     console.log("clicked");
@@ -65,6 +64,7 @@ $(function () {
     $("#evenOrOddOutput").html(evenOrOdd(userName));
     $("#reverseNameOutput").html(reverseName(userName));
     $("#avgLengthOutput").html(averageLength(userName));
+    $("#spiritAnimalOutput").html(spiritAnimal(userName));
   });
 });
 
@@ -88,8 +88,7 @@ function reverseName(name) {
 
 function averageLength(name) {
   //assuming average first name length of 6 characters
-  var comparedLength = name.length / 6;
-  var finalAverageLength = comparedLength * 10;
+  var finalAverageLength = name.length + 6 / 2;
   if (name.length < 6) {
     return "Your name is " + Math.floor(finalAverageLength) + "% shorter than the average length.";
   }
@@ -99,18 +98,13 @@ function averageLength(name) {
 }
 
 function spiritAnimal(name) {
-  
+  if (name.length > 6) {
+    return "Your name is longgg like your spirit animal, a giraffe!";
+  }
+  else {
+    return "Your name is super short like your spirit animal, a koala!";
+  }
 }
 
-// function everyOtherLetter = everyOtherArray((element, index) => {
-//   return index % 2 === 0;
-// })
 
-// console.log(everyOtherLetter);
-// function loopEveryOther(everyOtherArray) {
-//   for (let i=0; i < everyOtherArray.length; i++) {
-    
-//   }
-// }
- 
 

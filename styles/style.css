@@ -58,3 +58,11 @@ body {
 .ui-widget-content {
   text-align: center;
 }
+
+#spiritAnimalOutput, #reverseNameOutput, #evenOrOddOutput, #coolNameFactsOutput, #avgLengthOutput {
+  font-family: 'Mynerve', cursive;
+}
+
+.card-title, .card-text {
+  text-align: center;
+}
